@@ -1,15 +1,41 @@
 <style>
-  #tasks-list-todo, #tasks-list-current, #tasks-list-done { list-style-type: none; margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 143px;}
-  #tasks-list-todo li, #tasks-list-current li, #tasks-list-done li { margin: 5px; padding: 5px; font-size: 1.2em; width: 120px; }
-  </style>
+    #tasks-list-todo, #tasks-list-current, #tasks-list-done {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+        margin-right: 10px;
+        background: #eee;
+        padding: 5px;
+        width: 143px;
+    }
 
-    <ul id="tasks-list-todo" class="connectedSortable">
-    </ul>
-    <ul id="tasks-list-current"  class="connectedSortable">
-    </ul>
-    <ul id="tasks-list-done" class="connectedSortable">
-    </ul>
-
+    #tasks-list-todo li, #tasks-list-current li, #tasks-list-done li {
+        margin: 5px;
+        padding: 5px;
+        font-size: 1.2em;
+        width: 120px;
+    }
+</style>
+<table>
+    <tr>
+        <th>TODO</th><th>Doing</th><th>Done</th>
+    </tr>
+    <tr>
+        <td>
+            <ul id="tasks-list-todo" class="connectedSortable">
+            </ul>
+        </td>
+        <td>
+            <ul id="tasks-list-current" class="connectedSortable">
+            </ul>
+        </td>
+        <td>
+            <ul id="tasks-list-done" class="connectedSortable">
+            </ul>
+        </td>
+    </tr>
+</table>
 <br style="clear:both">
 
-<a href="#/addTask" >Ajouter task</a>
+<a href="#/addTask">Ajouter task</a>

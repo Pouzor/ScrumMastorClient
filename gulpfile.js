@@ -8,17 +8,18 @@ var minifycss = require('gulp-minify-css');
 var bower = require('gulp-bower');
 var karma = require('./index');
 
-gulp.task('bower', function() {
-  bower('bower/')
-    .pipe(gulp.dest('./build/css'));
+gulp.task('bower', function () {
+    bower('bower/')
+        .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('css', function() {
-   gulp.src('./build/css/bootstrap/dist/css/*.min.css')
-    .pipe(minifycss())
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('./css'));
+gulp.task('css', function () {
+    gulp.src(['./build/css/bootstrap/dist/css/*.min.css', './css/style.css'])
+        .pipe(minifycss())
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', ['bower', 'css'], function(){});
+gulp.task('default', ['bower', 'css'], function () {
+});
 
